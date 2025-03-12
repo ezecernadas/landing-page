@@ -1,6 +1,20 @@
+:root{
+    --background-color:#d1f3f9;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Merriweather', sans-serif;
+}
+
+.wrapper{
+    height: 100vh;
+    width: auto;
+    background-color: var(--background-color);
+}
+
+.cajaDeInfo{
+
 }

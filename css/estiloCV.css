@@ -10,6 +10,7 @@
 
 :root{
     --bg-color: #303030;
+    --bg-sobreMi-color: #ffce8a;
 }
 
 body{
@@ -22,6 +23,7 @@ body{
 main{
     height: 100%;
     width: 60%;
+    font-size: 24px;
 }
 
 aside{
@@ -34,7 +36,7 @@ aside{
 
 .perfil{
     padding: 1em;
-    height: 200px;
+    min-height: 200px;
     width: 100%;
     background-color: rgb(140, 243, 209);
     
@@ -43,8 +45,8 @@ aside{
 
     .foto{
         border: solid 3px black;
-        height: 100px;
-        width: 100px;
+        height: 150px;
+        width: 150px;
         border-radius: 50%;
         margin-top: 1em;
         overflow: hidden;
@@ -75,14 +77,16 @@ aside{
     min-height: 100px;
     width: 100%;
     background-color: rgb(103, 103, 255);
-    padding: 2em;
-
+    padding: 2em 1em;
+    font-size: 32px;
+    text-align: center;
+    gap: 1em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
 .educacion{
-    height: 300px;
+    min-height: 200px;
     width: 100%;
     background-color: rgb(216, 97, 245);
     padding: 2em;
@@ -110,4 +114,40 @@ aside{
 
 .columna{
     flex-direction: column;
+}
+
+.contenedorFlexbox{
+    display: flex;
+    background-color: gainsboro;
+    overflow-x: auto; /* detecta cuando se desborda y habilita el scroll*/
+    gap: 10px;
+}
+
+.tarjeta{
+    background-color: indigo;
+    color: white;
+    border-radius: 1em;
+    padding: 1em;
+    flex-grow: 1; /* para que no se expanda */
+    flex-shrink: 1; /* para que no se encoja*/
+    flex-basis: 100px; 
+    flex: 1 1 100px; /* para que no se expanda ni se encoja*/
+    /* flex: grow, shrink, basis; */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta:nth-of-type(odd){
+    background-color: red;
+}
+
+.tarjetaTitulo{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.tarjetaContenido{
+    font-size: 1em;
+    background-color: white;
+    color: gray;
+    padding: 1em;
+    border-radius: 1em;
 }

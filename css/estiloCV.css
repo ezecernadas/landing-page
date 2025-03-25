@@ -36,6 +36,16 @@ main{
     /* font-size: 24px; */
 }
 
+@media (min-width: 1250px) {
+    main{
+        font-size: 22px;
+    }
+    aside{
+        font-size: 22px;
+    }
+  }
+  
+
 .experiencia{
     li{
         margin-left: 1.3em;
@@ -55,6 +65,9 @@ main{
 }
 
 .tecnologias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .gridCard{
         display: grid;
@@ -100,6 +113,8 @@ main{
     padding-bottom: .3em;
     margin-bottom: .3em;
     border-bottom: solid 2px var(--txt-main-color);
+    align-self: flex-start;
+    width: 100%;
 }
 
 aside{
@@ -127,10 +142,11 @@ aside{
     padding-top: 1em;
 
     .foto{
-        height: 150px;
-        width: 150px;
+        height: 250px;
+        width: 250px;
         border-radius: 50%;
         overflow: hidden;
+        user-select: none;
     }
 
     .datos{

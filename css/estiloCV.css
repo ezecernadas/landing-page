@@ -9,46 +9,127 @@
 /* ---- variables de colores ---- */
 
 :root{
-    --bg-color: #303030;
-    --bg-sobreMi-color: #ffce8a;
+    --bg-color: #222222;
+    --bg-main-color: rgb(255, 255, 255);
+    --bg-aside-color: #F66969;
+    --txt-aside-color: black;
+    --txt-main-color: black;
+    --bg-cards: #82daf5;
 }
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
+    justify-content: center;
+    background-color: var(--bg-color);
 }
 
 main{
-    height: 100%;
-    width: 60%;
-    font-size: 24px;
+    width: 55%;
+    background-color: var(--bg-main-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em 2em;
+    /* font-size: 24px; */
+}
+
+.experiencia{
+    li{
+        margin-left: 1.3em;
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+.tecnologias{
+
+    .gridCard{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+        margin-top: .8em;
+        justify-content: center;
+
+        .tarjeta{
+            /* border: solid 1px var(--txt-main-color); */
+            width: fit-content;
+            min-width: 208px;
+            height: auto;
+            padding: .5em;
+            display: flex;
+            align-items: center;
+            gap: .5em;
+            font-size: 24px;
+            background-color: var(--bg-cards);
+            border-radius: 10px;
+            user-select: none;
+            i{
+                font-size: 50px;
+                background-color: white;
+                padding: 6px 8px;
+                border-radius: 10px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        .tarjeta:hover{
+            transform: scale(1.09);
+            transition: all ease-in-out 100ms;
+            cursor: pointer;
+        }
+        
+    }
+
+}
+
+.lineaDeSeccion{
+    padding-bottom: .3em;
+    margin-bottom: .3em;
+    border-bottom: solid 2px var(--txt-main-color);
 }
 
 aside{
     background-color: rgb(186, 246, 244);
-    color: white;
-    width: 40%;
-    height: 100%;
-    font-size: 24px;
+    background-color: var(--bg-aside-color);
+    color: var(--txt-aside-color);
+    width: 25%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* font-size: 24px; */
+}
+
+.asideSection{
+    width: 85%;
+    align-self: center;
+    color: var(--txt-aside-color);
 }
 
 .perfil{
-    padding: 1em;
-    min-height: 200px;
     width: 100%;
-    background-color: rgb(140, 243, 209);
-    
+    color: black;
     display: grid;
     place-items: center;
+    padding-top: 1em;
 
     .foto{
-        border: solid 3px black;
         height: 150px;
         width: 150px;
         border-radius: 50%;
-        margin-top: 1em;
         overflow: hidden;
     }
 
@@ -59,13 +140,13 @@ aside{
 
 .datosPersonales{
     width: 100%;
-    background-color: rgb(255, 103, 103);
-    padding: 2em;
+    padding: 1em 2em;
     
     .listaDP{
         margin-top: 1em;
         flex-direction: column;
         gap: 1em;
+        display: flex;
 
         li{
             list-style: none;
@@ -76,67 +157,36 @@ aside{
 .redes{
     min-height: 100px;
     width: 100%;
-    background-color: rgb(103, 103, 255);
-    padding: 2em 1em;
-    font-size: 32px;
-    text-align: center;
-    gap: 1em;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    padding: 1em 2em;
+    
+    h3{
+        margin-bottom: 1em;
+    }
+
+    .rejillaRedes{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        padding-bottom: .4em;
+    }
 }
 
 .educacion{
     min-height: 200px;
     width: 100%;
-    background-color: rgb(216, 97, 245);
-    padding: 2em;
+    padding: 1em 2em;
 }
 
-/* ---- colores ---- */
-.bg-azul{
-    background-color: blue;
-}
+/*overflow-x: auto; detecta cuando se desborda y habilita el scroll*/
 
-.bg-black{
-    background-color: black;
-}
+/* flex-grow: 1; para que no se expanda
+flex-shrink: 1; para que no se encoja
+flex-basis: 100px; 
+flex: 1 1 100px; para que no se expanda ni se encoja
+flex: grow, shrink, basis; */
 
-.txt-white{
-    color: white;
-}
-
-
-/* ---- ordenamiento de elementos ---- */
-
-.d-flex{
-    display: flex;
-}
-
-.columna{
-    flex-direction: column;
-}
-
-.contenedorFlexbox{
-    display: flex;
-    background-color: gainsboro;
-    overflow-x: auto; /* detecta cuando se desborda y habilita el scroll*/
-    gap: 10px;
-}
-
-.tarjeta{
-    background-color: indigo;
-    color: white;
-    border-radius: 1em;
-    padding: 1em;
-    flex-grow: 1; /* para que no se expanda */
-    flex-shrink: 1; /* para que no se encoja*/
-    flex-basis: 100px; 
-    flex: 1 1 100px; /* para que no se expanda ni se encoja*/
-    /* flex: grow, shrink, basis; */
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-}
-
-.tarjeta:nth-of-type(odd){
+/* .tarjeta:nth-of-type(odd){
     background-color: red;
 }
 
@@ -150,4 +200,4 @@ aside{
     color: gray;
     padding: 1em;
     border-radius: 1em;
-}
+} */

@@ -1,0 +1,102 @@
+@import url(../../assets/css/tipografias.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #585858;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    place-items: center;
+}
+
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, .5); */
+    position: relative;
+    color: white;
+}
+
+.cabecera{
+    height: 300px;
+    width: 300px;
+    background-color: blueviolet;
+    border-radius: .75em .75em 0 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    gap: 1em;
+}
+
+.fotoPerfil{
+    flex: 1 1 auto;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+}
+
+
+.data{
+    height: 200px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 0 0 .75em .75em;
+    overflow: hidden;
+    padding: 1em;
+}
+
+.datos{
+    text-align: center;
+}
+
+.texto-blanco{
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.contenedorTarjeta{
+    display: flex;
+    padding: 1em;
+    gap: 1em;
+}
+
+.plus{
+    width: 50px;
+    height: 50px;
+    background-color: indianred;
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    right: -25px;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+}
+
+.datoNumerico{
+    color: black;
+    text-align: center;
+    width: fit-content;
+    height: auto;
+    padding: .2em;
+    min-width: 88px;
+}
+
+.lineaNumerica{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

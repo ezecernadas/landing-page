@@ -4,17 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolios de Ezequiel</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body class="ubuntu-medium">
     <h1>Portafolios de Ezequiel</h1>
     <p>Bienvenido a la página de portafolios de Ezequiel Cernadas. Aqui podras encontrar información sobre mis Trabajos Practicos y Proyectos.</p>
     <h2>Trabajos Prácticos</h2>
-    <ul>
-        <li><a href="Tp00/index.html" target="_blank">Diseño curriculum</a></li>
-        <li><a href="Tp01_Tarjeta/tarjeta.html" target="_blank">Tarjeta Figma</a></li>
-        <li>Consultora tecnologica</li>
-    </ul>
-    <hr>
+    <section class="contenedorTarjetas">
+        <a href="Tp00/index.html" target="_blank" style="text-decoration: none;">
+            <article class="tpCard">
+                <section class="encabezado">
+                    <legend>TP 00 | <span style="font-weight: bold;">Curriculum</span></legend>
+                </section>
+
+                <section class="imagen">
+                    <img src="assets/img/curriculum.png" alt="">
+                </section>
+
+                <section class="descripcion">
+                    <legend>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et porro ex facilis nihil dolor, cumque culpa itaque exercitationem perspiciatis rem! Labore iusto at ipsum veritatis alias neque qui beatae deleniti!</legend>
+                </section>
+            </article>
+        </a>
+
+        <a href="Tp01_Tarjeta/tarjeta.html" target="_blank" style="text-decoration: none;">
+            <article class="tpCard">
+                <section class="encabezado">
+                    <legend>TP 01 | <span style="font-weight: bold;">Tarjeta Figma</span></legend>
+                </section>
+
+                <section class="imagen">
+                    <img src="assets/img/tarjeta_figma.png" alt="">
+                </section>
+
+                <section class="descripcion">
+                    <legend>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et porro ex facilis nihil dolor, cumque culpa itaque exercitationem perspiciatis rem! Labore iusto at ipsum veritatis alias neque qui beatae deleniti!</legend>
+                </section>
+            </article>
+        </a>
+    </section>
     <!-- <h2>Proyectos destacados</h2> -->
 </body>
 </html>

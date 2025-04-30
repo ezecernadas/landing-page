@@ -110,6 +110,11 @@ i{
     cursor: pointer;
 }
 
+.iconContainer > a{
+    text-decoration: none;
+    color: black;
+}
+
 .secciones{
     display: flex;
     justify-content: flex-start;

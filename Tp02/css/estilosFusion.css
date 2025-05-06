@@ -140,7 +140,9 @@ i{
     flex-direction: column;
     gap: 1em;
     overflow-y: scroll;
-    
+    scrollbar-width: none;
+    flex: 1 1 auto;
+    /* overflow: auto; */
 }
 
 .product{
@@ -154,20 +156,19 @@ i{
 }
 
 .imgContainer{
-    width: 40%;
+    height: 100%;
     aspect-ratio: 1 / 1;
     background-color: lightgray;
 }
 
 .imgContainer > img {
-    aspect-ratio: 1 / 1;
     object-fit: cover;
     height: 100%;
-    width: 100%;
 }
 
 .productData{
-    width: 60%;
+    flex: 1;
+    min-width: fit-content;
     padding: 1em;
     display: flex;
     flex-direction: column;

@@ -1,0 +1,41 @@
+@import url("../../assets/css/fawesome-all.css");
+
+:root {
+    --bg-dark: oklch(0.92 0 149);
+    --bg: oklch(0.96 0 149);
+    --bg-light: oklch(1 0 149);
+    --gradient: linear-gradient(0deg, var(--bg) 97%, var(--bg-light));
+    --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+    --text: oklch(0.15 0 149);
+    --text-muted: oklch(0.4 0 149);
+    --highlight: oklch(1 0 149);
+    --border: oklch(0.6 0 149);
+    --border-muted: oklch(0.7 0 149);
+    --primary: oklch(0.4 0.1 149);
+    --secondary: oklch(0.4 0.1 329);
+    --danger: oklch(0.5 0.05 30);
+    --warning: oklch(0.5 0.05 100);
+    --success: oklch(0.5 0.05 160);
+    --info: oklch(0.5 0.05 260);
+}
+
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+
+html {
+    background-color: var(--bg-dark);
+    display: grid;
+    place-items: center;
+}
+
+body {
+    max-width: 400px;
+    width: 100%;
+    height: 100vh;
+}

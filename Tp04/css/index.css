@@ -1,0 +1,112 @@
+.top {
+    height: 32%;
+    overflow-y: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2em;
+    color: var(--text);
+}
+
+#topimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#topimage:hover {
+    background: var(--gradient-hover);
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.bottom {
+    height: 58%;
+    background-color: var(--bg);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchBar {
+    background-color: var(--bg-light);
+    position: absolute;
+    top: -7%;
+    width: 85%;
+    height: 3em;
+    border: solid 1px;
+    border-color: var(--border-muted);
+    border-radius: 8px;
+    overflow: auto hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchBar input {
+    flex-grow: 1;
+    border: none;
+    padding-left: 1em;
+    color: var(--text-muted);
+}
+
+.searchBar i:first-child {
+    background-color: var(--primary);
+    color: var(--bg-light);
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.searchBar i:last-child {
+    background-color: var(--bg-light);
+    color: var(--primary);
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.searchBar i:first-child:hover {
+    background-color: var(--bg-light);
+    color: var(--primary);
+    transition: all 0.1s ease-in-out;
+}
+
+.searchBar i:last-child:hover {
+    background-color: var(--primary);
+    color: var(--bg-light);
+    transition: all 0.1s ease-in-out;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 1em;
+    padding-top: 3em;
+    gap: 1em;
+}
+
+.card {
+    background: var(--bg-light);
+    padding: 1rem 2rem;
+    border: var(--border-card);
+    border-top: 1px solid var(--highlight);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+}
+

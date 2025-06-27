@@ -1,41 +1,71 @@
 @import url("../../assets/css/fawesome-all.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital@0;1&display=swap');
+
+.roboto-normal {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.inter-normal {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 
 :root {
+    /* Fondo */
     --bg-dark: oklch(0.92 0 149);
     --bg: oklch(0.96 0 149);
     --bg-light: oklch(1 0 149);
+
     --gradient: linear-gradient(0deg, var(--bg) 97%, var(--bg-light));
     --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+
     --text: oklch(0.15 0 149);
     --text-muted: oklch(0.4 0 149);
+
+    /* Borde */
     --highlight: oklch(1 0 149);
     --border: oklch(0.6 0 149);
     --border-muted: oklch(0.7 0 149);
-    --primary: oklch(0.4 0.1 149);
+
+    --shadow: 0px 2px 2px oklch(0 0 0 / 0.2), 0px 4px 4px oklch(0 0 0 / 0.1);
+
+    --primary: oklch(0.7441 0.2121 148);
     --secondary: oklch(0.4 0.1 329);
+
+    /* Alertas */
     --danger: oklch(0.5 0.05 30);
     --warning: oklch(0.5 0.05 100);
     --success: oklch(0.5 0.05 160);
     --info: oklch(0.5 0.05 260);
 }
 
-*{
-    font-family: Arial, sans-serif;
+/* Global Styles */
+
+* {
+    font-family: "Inter", "Roboto", Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Global Styles */
-
-html {
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background-color: var(--bg-dark);
-    display: grid;
-    place-items: center;
 }
 
-body {
-    max-width: 400px;
+main {
     width: 100%;
+    max-width: 400px;
     height: 100vh;
+    max-height: 800px;
 }

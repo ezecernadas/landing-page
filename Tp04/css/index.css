@@ -6,7 +6,8 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: 2em;
-    color: var(--text);
+    color: white;
+    user-select: none;
 }
 
 #topimage {
@@ -29,7 +30,7 @@ h1 {
 }
 
 .bottom {
-    height: 58%;
+    height: 68%;
     background-color: var(--bg);
     position: relative;
     display: flex;
@@ -40,11 +41,12 @@ h1 {
 .searchBar {
     background-color: var(--bg-light);
     position: absolute;
-    top: -7%;
+    top: -5%;
     width: 85%;
     height: 3em;
     border: solid 1px;
     border-color: var(--border-muted);
+    box-shadow: var(--shadow);
     border-radius: 8px;
     overflow: auto hidden;
     display: flex;
@@ -103,10 +105,64 @@ h1 {
 
 .card {
     background: var(--bg-light);
-    padding: 1rem 2rem;
     border: var(--border-card);
     border-top: 1px solid var(--highlight);
-    border-radius: 1rem;
+    border-radius: .8rem;
     box-shadow: var(--shadow);
+    overflow: auto hidden;
+    display: flex;
+    flex-direction: row;
+    min-height: 100px;
+    position: relative;
+    user-select: none;
+}
+
+.card img{
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    -webkit-user-drag: none;
+}
+
+.infoCardContainer{
+    position: absolute;
+    right: 0;
+    width: 62%;
+    height: 100%;
+    padding: .7em;
+    border-radius: 0 0 0 20px;
+    background-color: var(--bg-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.infoCardContainer legend:first-child{
+    color: var(--text);
+    font-weight: bold;
+    font-size: clamp(0.6875rem, 0.625rem + 0.3125vw, 0.875rem);
+}
+
+.infoCardContainer legend{
+    color: var(--text-muted);
+    font-size: 10px;
+}
+
+.infoCardContainer .puntaje{
+    width: 20%;
+    display: flex;
+    gap: .2em;
+    font-size: clamp(0.75rem, 0.7083rem + 0.2083vw, 0.875rem);
+}
+
+.precio{
+    font-size: clamp(0.75rem, 0.7083rem + 0.2083vw, 0.875rem);
+}
+
+.infoCardContainer .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 

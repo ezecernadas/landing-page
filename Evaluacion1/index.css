@@ -375,14 +375,19 @@ header .minwidth{
 
 .specialOffers{
     width: 100%;
-    height: fit-content;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 20px 0;
+    gap: 30px;
+    padding: 10px;
     background-color: var(--bg-light);
     margin-top: 20px;
+    border-radius: 12px;
+}
+
+.specialOffers img{
+    height: 100%;
 }
 
 .specialOffers legend{
@@ -391,12 +396,20 @@ header .minwidth{
     color: var(--text);
 }
 
+.specialOffers .container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .specialOffers .container span{
     border-radius: 100%;
-    padding: 2px;
-    width: 20px;
+    padding: 5px;
+    font-size: 0.8em;
+    text-align: center;
+    width: 30px;
     height: 30px;
-    border: solid 2px lightgray;
+    border: solid 1px lightgray;
 }
 
 nav{

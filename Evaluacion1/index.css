@@ -46,7 +46,7 @@ main {
     max-height: 1000px;
     background-color: var(--bg);
     padding: 0 20px;
-    padding-bottom: 70px; /* Space for the fixed nav */
+    padding-bottom: 90px; /* Space for the fixed nav */
     position: relative;
     overflow-x: auto hidden;
 }
@@ -237,6 +237,12 @@ header .minwidth{
     font-size: 0.9em;
 }
 
+.ad button:hover{
+    background-color: white;
+    color: var(--text);
+    transition: all 0.2s ease-in-out;
+}
+
 .ad img{
     position: absolute;
     top: 0;
@@ -250,15 +256,46 @@ header .minwidth{
 
 .dealDay{
     width: 100%;
-    height: 100px;
+    height: 80px;
     background-color: #4392f9;
     color: white;
     border-radius: 12px;
-    padding: 10px;
+    padding: 20px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
     justify-content: space-between;
+    position: relative;
     gap: 10px;
+}
+
+.dealDay legend:first-child{
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.dealDay legend{
+    font-size: 0.9em;
+}
+
+.dealDay button{
+    background: transparent;
+    color: white;
+    border: solid 2px white;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dealDay button:hover{
+    background-color: white;
+    color: var(--text);
+    transition: all 0.2s ease-in-out;
 }
 
 nav{
@@ -304,4 +341,5 @@ nav{
     background-color: var(--bg-light);
     translate: 0 -25px;
     box-shadow: var(--shadow);
+    cursor: pointer;
 }
